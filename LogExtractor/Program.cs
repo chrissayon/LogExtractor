@@ -18,7 +18,7 @@
 
       // Calculate unique IP addresses
       extractor.CalculateUniqueIpAddresses();
-      Console.WriteLine($"Unique IP Addresses: \n{extractor.numberOfUniqueIpAddresses}");
+      Console.WriteLine($"Unique IP Addresses \n{extractor.numberOfUniqueIpAddresses}");
     
       // Calculate top three active IP addresses
       extractor.CalculateTopThreeMostActiveIpAddresses();
@@ -26,6 +26,14 @@
       foreach (var activeIpAddress in extractor.topThreeMostActiveIpAddresses)
       {
         Console.WriteLine(activeIpAddress);
+      }
+
+      // Calculate top three most active urls
+      extractor.CalculateTopThreeMostVisitedUrls();
+      Console.WriteLine($"\nTop Three Active URLs");
+      foreach (var activeUrls in extractor.topThreeMostVisitedUrls)
+      {
+        Console.WriteLine(activeUrls);
       }
     }
   }

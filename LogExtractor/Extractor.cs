@@ -65,5 +65,38 @@ namespace LogExtractor
 
       topThreeMostActiveIpAddresses = sortedActiveIpAddressList;
     }
+
+    /// <summary>
+    ///  Calculate three most visited URLs
+    /// </summary>
+    public void CalculateTopThreeMostVisitedUrls()
+    {
+      //Extract out urls
+      var ipAddressList = ipLogs.Select(log =>
+      {
+        int startIndex = log.IndexOf("GET ") + 4;
+        int length = log.IndexOf(" HTTP") - startIndex;
+
+        return log.Substring(startIndex, length);
+      });
+
+      // Place key/value = urls/occurenceOfUrls
+      Dictionary<string, int> urlList = new Dictionary<string, int>();
+      foreach (string ipAddress in ipAddressList)
+      {
+        if (!urlList.ContainsKey(ipAddress))
+          urlList.Add(ipAddress, 1);
+        else
+          urlList[ipAddress] = urlList[ipAddress] + 1;
+      }
+
+      var sortedUrlList = urlList
+          .OrderByDescending(_ => _.Value)
+          .Take(3)
+          .Select(keyValuePair => keyValuePair.Key)
+          .ToArray();
+
+      topThreeMostVisitedUrls = sortedUrlList;
+    }
   }
 }
