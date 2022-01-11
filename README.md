@@ -11,6 +11,8 @@ An argument stating the path of where the file is located is needed. There is a 
 Hence you can use your IDE to execute the project with the argument, or use the following command with dotnet cli  at the root folder:
 
 ```
+ dotnet restore
+ dotnet build
  dotnet run --project LogExtractor .\LogExtractor\assets\programming-task-example-data.log
 ```
 
