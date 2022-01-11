@@ -15,5 +15,25 @@ namespace LogExtractor
     {
       ipLogs = File.ReadAllLines(pathToFile);
     }
+
+    /// <summary>
+    /// Calculate number of unique IP addresses based off log files.
+    /// Result will be placed into "numberOfUniqueIpAddresses" member
+    /// </summary>
+    public void CalculateUniqueIpAddresses()
+    {
+      // Extract out IP Address List
+      var ipAddressList = ipLogs.Select(log =>
+      {
+        return log.Substring(0, log.IndexOf(" "));
+      });
+
+      HashSet<string> uniqueIpAddresses = new HashSet<string>();
+      
+      // Place list into HashSet and grab the list of addresses in HashSet
+      uniqueIpAddresses.UnionWith(ipAddressList);
+
+      numberOfUniqueIpAddresses = uniqueIpAddresses.Count();
+    }
   }
 }

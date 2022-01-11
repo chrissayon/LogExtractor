@@ -15,6 +15,9 @@
 
       // Place logs into object
       extractor.GetLogs(args[0]);
+
+      extractor.CalculateUniqueIpAddresses();
+      Console.WriteLine($"Unique IP Addresses: {extractor.numberOfUniqueIpAddresses}");
     }
   }
 }
