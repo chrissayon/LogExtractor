@@ -42,7 +42,7 @@ namespace LogExtractor.Test
             Assert.AreEqual(expectedResults, extractor.topThreeMostActiveIpAddresses);
         }
 
-        [Test, Description("Calculate Unique Ip Addressess Successful")]
+        [Test, Description("Calculate Most Visited Urls")]
         public void CalculateMostVisitedUrls_IpLogsObtained_ReturnMostVisitedUrls()
         {
             Extractor extractor = new Extractor();
