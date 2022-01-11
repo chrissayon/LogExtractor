@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogExtractor", "LogExtractor\LogExtractor.csproj", "{B439E8AB-113E-465E-9FA9-F4903F51295E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogExtractor.Test", "LogExtractor.Test\LogExtractor.Test.csproj", "{89C6E281-FCF4-4987-A65F-A18C52E4B501}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B439E8AB-113E-465E-9FA9-F4903F51295E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B439E8AB-113E-465E-9FA9-F4903F51295E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B439E8AB-113E-465E-9FA9-F4903F51295E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B439E8AB-113E-465E-9FA9-F4903F51295E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89C6E281-FCF4-4987-A65F-A18C52E4B501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89C6E281-FCF4-4987-A65F-A18C52E4B501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89C6E281-FCF4-4987-A65F-A18C52E4B501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89C6E281-FCF4-4987-A65F-A18C52E4B501}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
