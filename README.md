@@ -1,5 +1,5 @@
 # LogExtractor
-Extracts out the logs from the specified file and logs out unique ip addresses, most active ip addresses, and unique ip addresses.
+Extracts out the logs from the specified file and logs out unique ip addresses, most active ip addresses, and most visited urls.
 
 Requires .NET 6.
 
