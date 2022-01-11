@@ -35,5 +35,35 @@ namespace LogExtractor
 
       numberOfUniqueIpAddresses = uniqueIpAddresses.Count();
     }
+
+    /// <summary>
+    /// Calculate three most active Ip addresses
+    /// </summary>
+    public void CalculateTopThreeMostActiveIpAddresses()
+    {
+      // Extract out IP Address List
+      var ipAddressList = ipLogs.Select(log =>
+      {
+        return log.Substring(0, log.IndexOf(" "));
+      });
+
+      // Place key/value = ipAddress/numberOfIps
+      Dictionary<string, int> activeIpAddressList = new Dictionary<string, int>();
+      foreach (string ipAddress in ipAddressList)
+      {
+        if (!activeIpAddressList.ContainsKey(ipAddress))
+          activeIpAddressList.Add(ipAddress, 1);
+        else
+          activeIpAddressList[ipAddress] = activeIpAddressList[ipAddress] + 1;
+      }
+
+      var sortedActiveIpAddressList = activeIpAddressList
+          .OrderByDescending(_ => _.Value)
+          .Take(3)
+          .Select(keyValuePair => keyValuePair.Key)
+          .ToArray();
+
+      topThreeMostActiveIpAddresses = sortedActiveIpAddressList;
+    }
   }
 }
