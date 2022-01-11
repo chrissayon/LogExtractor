@@ -10,7 +10,7 @@
       "request": "launch",
       "preLaunchTask": "build",
       "program": "${workspaceFolder}/LogExtractor/bin/Debug/net6.0/LogExtractor.dll",
-      "args": [],
+      "args": ["${workspaceFolder}/LogExtractor/assets/programming-task-example-data.log"],
       "cwd": "${workspaceFolder}/LogExtractor",
       "console": "internalConsole",
       "stopAtEntry": false
