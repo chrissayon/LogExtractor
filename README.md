@@ -6,7 +6,7 @@ Requires .NET 6.
 The main project is contained in LogExtractor, and the unit tests are stored in LogExtractor.Test.
 
 ## How to run
-An argument stating the path of where the file is located. There is a log file in this repo LogExtractor/assets/programming-task-example-data.
+An argument stating the path of where the file is located is needed. There is a log file in this repo LogExtractor/assets/programming-task-example-data.
 
 Hence you can use your IDE to execute the project with the argument, or use the following command with dotnet cli  at the root folder:
 
