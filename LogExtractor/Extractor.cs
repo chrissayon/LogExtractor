@@ -1,6 +1,6 @@
 namespace LogExtractor
 {
-  class Extractor
+  public class Extractor
   {
     public int numberOfUniqueIpAddresses { get; set; } = 0;
     public string[] topThreeMostVisitedUrls { get; set; } = { "None" };
